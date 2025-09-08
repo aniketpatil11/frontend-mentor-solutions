@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-default: hsl(0, 0%, 100%);
+  --bg-muted: hsl(212, 46%, 89%);
+  --text-muted: hsl(216, 15%, 48%);
+  --text-primary: hsl(218, 44%, 22%);
+  /* FONT  */
+  --font-size-title: 22px;
+  --font-size-normal: 15px;
+  /* SPACING */
+  --space-base: 1rem;
+  --space-medium: 1.5rem;
+  --space-large: 2.5rem;
+}
+
+body {
+  background-color: var(--bg-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  border-radius: 20px;
+  width: 320px;
+  padding: var(--space-base) var(--space-base) var(--space-large)
+    var(--space-base);
+  background-color: var(--bg-default);
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
+}
+
+.card > img {
+  border-radius: 10px;
+  width: 288px;
+  height: 288px;
+  margin-bottom: var(--space-medium);
+}
+
+.info {
+  padding: 0 var(--space-base);
+}
+.title {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-base);
+  color: var(--text-primary);
+}
+
+.description {
+  font-size: var(--font-size-normal);
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}

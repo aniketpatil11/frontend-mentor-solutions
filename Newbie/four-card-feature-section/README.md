@@ -17,7 +17,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### What I learned
 
-I learned about grids and placing items inside the container. First I struggled with box-shadows, but then found the way to make box shadown work in expected manner.
+I learned about grids and alignments of items inside. First I struggled with box-shadows, but then found the way to make box shadown work in expected manner.
 
 ## Acknowledgments
 

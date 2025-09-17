@@ -1,0 +1,282 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(4, 100%, 67%);
+  /* Neutral */
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Mobile first approach */
+body {
+  min-height: 100vh;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+/* .container picture img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+} */
+
+.container picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+
+.newsletter {
+  padding: 2rem 1.5rem;
+}
+
+.newsletter-info,
+ul {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--blue-700);
+}
+.newsletter-heading {
+  text-align: left;
+  color: var(--blue-800);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter-info {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--blue-700);
+  margin-bottom: 2rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  list-style-image: url("../../assets/images/icon-list.svg");
+}
+ul li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group .email-id {
+  font-weight: 700;
+  color: var(--blue-800);
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+
+.form-group small {
+  display: none;
+}
+
+.form-group small.error {
+  display: flex;
+  color: var(--red);
+}
+
+#form input {
+  display: block;
+  padding: 1rem 2rem;
+  width: 100%;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+#form input::placeholder {
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+#form .invalid-email {
+  background-color: hsl(5, 62%, 89%);
+  border: 1px solid var(--red);
+}
+
+#form input[type="email"]:focus {
+  border-color: 2px solid gray;
+}
+
+#form input.invalid-email[type="email"] {
+  color: var(--red);
+}
+
+#form .invalid-email::placeholder {
+  color: var(--red);
+}
+#form button {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  background-color: var(--blue-800);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+/* ============================ SUCCESS BODY ===================================== */
+/* Success Container */
+.success-container {
+  display: grid;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90vh auto;
+}
+
+.success-body {
+  max-height: 100vh;
+}
+
+.success {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.success img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 2rem;
+}
+
+.success-heading {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--blue-800);
+}
+
+.success-message {
+  font-weight: 400;
+  color: var(--blue-700);
+}
+
+.success-message span {
+  font-weight: 700;
+  color: var(--blue-800);
+}
+.dissmiss-message {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  background-color: var(--blue-800);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ====================== */
+/* DESKTOP DESIGN  */
+/* ========================= */
+
+@media (min-width: 760px) {
+  body {
+    background-color: var(--blue-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background-color: var(--white);
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 2rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .newsletter {
+    order: -1;
+  }
+
+  .container picture img {
+    width: 100%;
+    object-fit: cover;
+    font-size: 0;
+    display: block;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .image {
+    line-height: 0;
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .newsletter h1 {
+    font-size: 3rem;
+  }
+
+  .success-body {
+    background-color: var(--blue-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .success-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem 3rem;
+    gap: 1.5rem;
+    height: 30%;
+    width: 30%;
+    border-radius: 20px;
+  }
+
+  .success-heading {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+  }
+
+  .success {
+    display: block;
+  }
+
+  .success a {
+    display: block;
+  }
+}

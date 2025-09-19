@@ -124,6 +124,7 @@ body {
 
 .card__schedule ul li:hover {
   color: var(--navy-200);
+  cursor: pointer;
 }
 
 /* DOCORATING OTHER CARDS */

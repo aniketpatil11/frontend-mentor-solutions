@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --font-sm: 0.875rem;
+  --font-bs: 1rem;
+  --font-l: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-2xl: 2rem;
+  --font-3xl: 2.5rem;
+
+  /* PRIMARY COLOURS  */
+  --purple-600: hsl(246, 80%, 60%);
+  --orange-work: hsl(15, 100%, 70%);
+  --blue-play: hsl(195, 74%, 62%);
+  --pink-study: hsl(348, 100%, 68%);
+  --green-exercise: hsl(145, 58%, 55%);
+  --purple-social: hsl(264, 64%, 52%);
+  --yellow-self-care: hsl(43, 84%, 65%);
+
+  /* NEUTRAL COLOURS  */
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --purple-500: hsl(235, 45%, 61%);
+  --navy-200: hsl(236, 100%, 87%);
+}
+
+/* Desktop First Approach  */
+
+body {
+  background-color: var(--navy-950);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.dashboard {
+  width: 70%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.person {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--space-4);
+  background-color: var(--navy-900);
+}
+
+.personal__information {
+  border-radius: var(--space-4);
+  padding: var(--space-5);
+  flex: 2;
+  background-color: var(--purple-600);
+}
+
+.personal__information img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: var(--space-3) 0;
+}
+
+.personal__information p {
+  display: block;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+  color: white;
+  font-size: var(--font-sm);
+  font-weight: 300;
+}
+
+.personal__information h1 {
+  color: white;
+  font-weight: 300;
+  font-size: var(--font-2xl);
+}
+
+.card__schedule {
+  flex: 1;
+}
+
+.card__schedule {
+  padding: var(--space-5);
+}
+
+.card__schedule ul {
+  list-style: none;
+  color: var(--navy-200);
+  color: var(--purple-500);
+}
+
+.card__schedule ul li {
+  margin: var(--space-3);
+}
+.card__schedule ul li.active {
+  color: var(--navy-200);
+}
+
+.card__schedule ul li:hover {
+  color: var(--navy-200);
+}
+
+/* DOCORATING OTHER CARDS */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--space-4);
+}
+
+.card__illustration {
+  flex: 1;
+  position: relative;
+}
+
+.card__illustration img {
+  position: absolute;
+  top: -5px;
+  right: 16px;
+  z-index: -1;
+  height: 60px;
+  width: 60px;
+  opacity: 0.8;
+  display: block;
+  line-height: 0;
+}
+
+.card__information {
+  flex: 4;
+  background-color: var(--navy-900);
+  z-index: 10;
+  padding: var(--space-4) var(--space-5);
+  color: white;
+  border-radius: var(--space-4) var(--space-4) 0 0;
+}
+
+.card__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.card__title h3 {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.information__hours {
+  font-size: var(--font-3xl);
+  font-weight: 300;
+  margin-bottom: var(--space-3);
+}
+
+.information__previous {
+  color: var(--purple-500);
+}
+
+.work {
+  background-color: var(--orange-work);
+}
+
+.work .card__illustration {
+  background-color: var(--orange-work);
+  opacity: 0.8;
+}
+
+.play {
+  background-color: var(--blue-play);
+}
+
+.play .card__illustration {
+  background-color: var(--blue-play);
+  opacity: 0.8;
+}
+
+.study {
+  background-color: var(--pink-study);
+}
+
+.study .card__illustration {
+  background-color: var(--pink-study);
+  opacity: 0.8;
+}
+
+.exercise {
+  background-color: var(--green-exercise);
+}
+
+.exercise .card__illustration {
+  background-color: var(--green-exercise);
+  opacity: 0.8;
+}
+
+.social {
+  background-color: var(--purple-social);
+}
+
+.social .card__illustration {
+  background-color: var(--purple-social);
+  opacity: 0.8;
+}
+
+.self-care {
+  background-color: var(--yellow-self-care);
+}
+
+.self-care .card__illustration {
+  background-color: var(--yellow-self-care);
+  opacity: 0.8;
+}

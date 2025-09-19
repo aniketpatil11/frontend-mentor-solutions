@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- Font for project -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="dashboard">
+      <article class="person">
+        <!-- <div class="card__title"><h3>Person</h3></div>
+        <i class="fa-solid fa-ellipsis"></i> -->
+        <div class="personal__information">
+          <img src="./images/image-jeremy.png" alt="Image of Jeremy Robson" />
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+        <div class="card__schedule">
+          <ul>
+            <li>Daily</li>
+            <li class="active">Weekly</li>
+            <li>Monthly</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card work">
+        <div class="card__illustration">
+          <img src="./images/icon-work.svg" alt="Work Icon" />
+        </div>
+        <div class="card__information">
+          <div class="card__title">
+            <h3>Work</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h2 class="information__hours">32hrs</h2>
+          <p class="information__previous">Last Week - 36hrs</p>
+        </div>
+      </article>
+      <article class="card play">
+        <div class="card__illustration">
+          <img src="./images/icon-play.svg" alt="Play Icon" />
+        </div>
+        <div class="card__information">
+          <div class="card__title">
+            <h3>Play</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h2 class="information__hours">32hrs</h2>
+          <p class="information__previous">Last Week - 36hrs</p>
+        </div>
+      </article>
+      <article class="card study">
+        <div class="card__illustration">
+          <img src="./images/icon-study.svg" alt="Study Icon" />
+        </div>
+        <div class="card__information">
+          <div class="card__title">
+            <h3>Study</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h2 class="information__hours">32hrs</h2>
+          <p class="information__previous">Last Week - 36hrs</p>
+        </div>
+      </article>
+      <article class="card exercise">
+        <div class="card__illustration">
+          <img src="./images/icon-exercise.svg" alt="Exercise Icon" />
+        </div>
+        <div class="card__information">
+          <div class="card__title">
+            <h3>Exercise</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h2 class="information__hours">32hrs</h2>
+          <p class="information__previous">Last Week - 36hrs</p>
+        </div>
+      </article>
+      <article class="card social">
+        <div class="card__illustration">
+          <img src="./images/icon-social.svg" alt="Social Icon" />
+        </div>
+        <div class="card__information">
+          <div class="card__title">
+            <h3>Social</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h2 class="information__hours">32hrs</h2>
+          <p class="information__previous">Last Week - 36hrs</p>
+        </div>
+      </article>
+      <article class="card self-care">
+        <div class="card__illustration">
+          <img src="./images/icon-self-care.svg" alt="Self Care" />
+        </div>
+        <div class="card__information">
+          <div class="card__title">
+            <h3>Self Care</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <h2 class="information__hours">32hrs</h2>
+          <p class="information__previous">Last Week - 36hrs</p>
+        </div>
+      </article>
+    </main>
+
+    <script defer src="./src/js/script.js"></script>
+  </body>
+</html>

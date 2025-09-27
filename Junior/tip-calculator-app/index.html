@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <h1>spli<br />tter</h1>
+    </header>
+    <main class="container">
+      <div class="price-selector">
+        <form action="" id="price-form">
+          <div class="form-group">
+            <label for="amount">Bill</label>
+            <div class="input-arrange">
+              <span
+                ><img src="./images/icon-dollar.svg" alt="Dollar Sign"
+              /></span>
+              <input
+                type="number"
+                id="amount"
+                class="selection-input"
+                placeholder="0.0"
+              />
+            </div>
+          </div>
+          <div class="form-group" id="tip-select">
+            <label for="select-tip">Select Tip %</label>
+            <div id="select-tip">
+              <button class="percentage-tip" id="per5">5%</button>
+              <button class="percentage-tip" id="per10">10%</button>
+              <button class="percentage-tip" id="per15">15%</button>
+              <button class="percentage-tip" id="per25">25%</button>
+              <button class="percentage-tip" id="per50">50%</button>
+              <input
+                type="number"
+                class="percentage-tip-custom"
+                id="per-cust"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="number-of-people">Number of People</label>
+            <div class="input-arrange">
+              <span
+                ><img src="./images/icon-person.svg" alt="Dollar Image sign"
+              /></span>
+              <input
+                type="number"
+                id="number-of-people"
+                class="selection-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="price-display">
+        <form action="" id="display-form">
+          <div class="form-group">
+            <div class="total-amount">
+              <div class="tip">
+                <h2 class="amount-label">Tip Amount</h2>
+                <h3>/ person</h3>
+              </div>
+              <p class="price">$0.00</p>
+            </div>
+            <div class="total-amount">
+              <div class="total">
+                <h2 class="amount-label">Total</h2>
+                <h3>/ person</h3>
+              </div>
+              <p class="price">$0.00</p>
+            </div>
+          </div>
+          <button class="reset">reset</button>
+        </form>
+      </div>
+    </main>
+    <script src="./src/js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 2rem;
+}
+
+.project-card {
+  border: none;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}

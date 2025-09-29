@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colours  */
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(276, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+  --hover-purple: rgb(170, 39, 227);
+  /* Sizes  */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--purple-100);
+  font-family: "Work Sans", sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+header img {
+  width: 100%;
+}
+.container {
+  background-color: var(--white);
+  z-index: 100;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 45%;
+  transform: translatex(-50%);
+  border: none;
+  border-radius: 20px;
+  padding: var(--space-8);
+  box-shadow: 0px 20px 24px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container .faq {
+  padding: var(--space-4) 0;
+  font-size: 4rem;
+}
+
+.container .faq::before {
+  content: url("../../assets/images/icon-star.svg");
+  margin-right: var(--space-4);
+}
+
+.q-and-a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: var(--space-4) 0;
+}
+
+main .q-and-a:last-child {
+  border-bottom: none;
+}
+
+.q-and-a .question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: var(--space-4);
+  color: var(--purple-950);
+  position: relative;
+  padding: 0 var(--space-4) 0 0;
+}
+
+.q-and-a .question:hover {
+  color: var(--hover-purple);
+  cursor: pointer;
+}
+.q-and-a .question::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../assets/images/icon-plus.svg");
+  width: 2rem;
+  height: 2rem;
+  margin-left: var(--space-8);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.q-and-a.active .question::after {
+  background-image: url("../../assets/images/icon-minus.svg");
+}
+.q-and-a .answer {
+  height: 0;
+  overflow: hidden;
+}
+
+.q-and-a.active .answer {
+  height: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--purple-600);
+  padding: var(--space-4) 0;
+  line-height: 1.5rem;
+}

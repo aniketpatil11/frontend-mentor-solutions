@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="form-title">Contact Us</h1>
+      <form action="https://frontendmentor.io" id="contact-us" novalidate>
+        <fieldset class="user-name">
+          <div class="first-name">
+            <label for="first-name">First Name <sup>*</sup></label>
+            <input id="first_name" type="text" required />
+            <small class="error-message">This field is required</small>
+          </div>
+          <div class="last-name">
+            <label for="last-name">Last Name <sup>*</sup></label>
+            <input type="text" id="last_name" required />
+            <small class="error-message">This field is required</small>
+          </div>
+        </fieldset>
+        <fieldset class="user-email">
+          <label for="email">Email Address<sup>*</sup></label>
+          <input type="email" id="email_ad" required />
+          <small class="error-message">This field is required</small>
+        </fieldset>
+        <fieldset class="query-type">
+          <label class="query">Query Type<sup>*</sup></label>
+          <div class="query-option">
+            <div class="query-option_actual">
+              <input
+                type="radio"
+                id="general-en"
+                name="query_type"
+                value="General Query"
+                required
+              />
+              <label for="general-en">General Enquiry</label>
+            </div>
+            <div class="query-option_actual">
+              <input
+                type="radio"
+                id="support-req"
+                name="query_type"
+                value="Support Request"
+                required
+              />
+              <label for="support-req">Support Request</label>
+            </div>
+          </div>
+          <small class="error-message">Please select your query type</small>
+        </fieldset>
+
+        <!-- Message section  -->
+        <fieldset class="user-message">
+          <label for="message" id="user-msg">Message<sup>*</sup></label>
+          <textarea id="message" required> </textarea>
+          <small class="error-message">The field is required</small>
+        </fieldset>
+        <fieldset class="consent-check">
+          <div class="consent-box">
+            <input type="checkbox" id="consent" required />
+            <label for="consent"
+              >I consent to being contacted by the team <sup>*</sup>
+            </label>
+          </div>
+          <small class="error-message"
+            >To submit this form please consent to being contacted</small
+          >
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <script src="./src/js/script.js" defer></script>
+  </body>
+</html>

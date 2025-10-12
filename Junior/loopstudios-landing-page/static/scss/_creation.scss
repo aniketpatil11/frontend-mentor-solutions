@@ -1,0 +1,112 @@
+@use "mixins";
+@use "variables";
+
+// background images
+// $earth =     background-image: url("../../images/desktop/image-deep-earth.jpg");
+
+.creation {
+  @include mixins.container-center(8);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+  }
+
+  &__all__link {
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    font-family: "Alata", sans-serif;
+    text-decoration: none;
+    border: 1px solid black;
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+  }
+
+  &__grid {
+    display: grid;
+    margin-top: 2rem;
+    height: 1020px;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 500px 500px;
+    grid-template-rows: auto auto;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+}
+
+.creation__item {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  height: 100%;
+  align-items: flex-end;
+  padding: 0 2rem 2rem 2rem;
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    z-index: -1;
+  }
+  h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    width: 70%;
+    font-size: 2rem;
+  }
+  &--earth {
+    background-image: url("../../images/desktop/image-deep-earth.jpg");
+  }
+
+  &--arcade {
+    background-image: url("../../images/desktop/image-night-arcade.jpg");
+  }
+
+  &--soccer {
+    background-image: url("../../images/desktop/image-soccer-team.jpg");
+  }
+
+  &--the-grid {
+    background-image: url("../../images/desktop/image-grid.jpg");
+    h3 {
+      width: 50%;
+    }
+  }
+
+  &--vr {
+    background-image: url("../../images/desktop/image-from-above.jpg");
+    h3 {
+      width: 100%;
+    }
+    width: 100%;
+  }
+
+  &--borealis {
+    background-image: url("../../images/desktop/image-pocket-borealis.jpg");
+  }
+
+  &--curiosity {
+    background-image: url("../../images/desktop/image-curiosity.jpg");
+  }
+
+  &--fisheye {
+    background-image: url("../../images/desktop/image-fisheye.jpg");
+  }
+}

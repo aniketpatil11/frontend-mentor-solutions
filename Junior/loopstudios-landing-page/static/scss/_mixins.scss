@@ -1,0 +1,51 @@
+// Spacing
+
+$space-map: (
+  1: 0.25,
+  2: 0.5,
+  3: 0.75,
+  4: 1,
+  5: 1.25,
+  6: 1.5,
+  7: 1.75,
+  8: 2,
+  10: 2.5,
+  12: 3,
+);
+
+@each $key, $value in $space-map {
+  .m-#{$key} {
+    margin: #{$value}rem;
+  }
+
+  .p-#{$key} {
+    padding: #{$value}rem;
+  }
+
+  .mx-#{$key} {
+    margin: 0 #{$value}rem;
+  }
+
+  .my-#{$key} {
+    margin: #{$value}rem 0;
+  }
+
+  .py-#{$key} {
+    padding: #{$value}rem 0;
+  }
+
+  .px-#{$key} {
+    padding: 0 #{$value}rem;
+  }
+}
+
+// Container
+
+@mixin container-center($margin-top: 0) {
+  width: 80%;
+  margin: #{$margin-top}rem auto;
+}
+
+.container {
+  @include container-center(0);
+}

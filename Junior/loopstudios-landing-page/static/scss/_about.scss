@@ -1,0 +1,49 @@
+@use "mixins";
+@use "variables";
+
+.about {
+  @include mixins.container-center(8);
+  position: relative;
+  height: 500px;
+  &__image {
+    width: clamp(60%, 60vw, 60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 3 / 1;
+    height: 100%;
+  }
+
+  &__information {
+    position: absolute;
+    height: 70%;
+    right: 0;
+    left: 49%;
+    top: 30%;
+    background-color: white;
+    padding: 6rem 0 0 6rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: variables.$primary-black;
+  }
+
+  &__info {
+    color: lighten(variables.$primary-black, 50%);
+    font-family: "Alata", sans-serif;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 1450px) {
+  .about__info {
+    width: 85%;
+  }
+}
